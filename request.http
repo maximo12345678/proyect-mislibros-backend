@@ -1,0 +1,76 @@
+//se sabe por la extension, que lo que se quiere es realizar o enviar peticiones http a nuestro servidor
+
+###########################################################################################################################################################
+
+### //siempre va uno de estos antes de una peticion
+GET http://localhost:9000/api HTTP/1.1
+
+
+### // en CONTENT, o en las llaves u objeto, va el contenido, pasamos los objetos y la info que queremos enviar. EL ID NO, PORQUE ES AUTOINCREMENTABLE EN LA BD
+POST http://localhost:9000/api HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "parlante",
+    "autor": "nazi",
+    "edicion": 41,
+    "descripcion": "boludo"
+}
+
+
+### // DELETE. donde va el 2, es el ID que le pasamos par que borre. puede ser una variable
+DELETE http://localhost:9000/api/3 HTTP/1.1 
+
+
+###
+PUT http://localhost:9000/api/6  HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "El padrino III",
+    "autor": "Georgina",
+    "edicion": 10
+}
+
+### //siempre va uno de estos antes de una peticion
+GET http://localhost:9000/api/unLibro/68 HTTP/1.1
+
+
+
+###
+GET http://localhost:9000/api/librosPublicos  HTTP/1.1
+
+
+
+
+
+###########################################################################################################################################################
+
+
+###
+GET http://localhost:9000/api/unaImagen/39 HTTP/1.1
+
+
+###########################################################################################################################################################
+
+
+POST http://localhost:9000/api/agregarUsuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Miguel Jimenez",
+    "email": "miguel@hotmail.com",
+    "password": "12345678",
+    "telefono": "145989533",
+    "nombreUsuario": "miguelito123"
+}
+
+
+###
+GET http://localhost:9000/api/traerUsuario/miguelito123 HTTP/1.1
+
+
+
+
+
+###########################################################################################################################################################
